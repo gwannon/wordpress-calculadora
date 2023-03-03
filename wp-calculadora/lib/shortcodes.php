@@ -3,6 +3,7 @@
 // Códigos cortos --------------------------------------
 function wp_calculadora_shortcode ($params = array(), $content = null) {
   global $post;
+  if (get_option('_wp_calculadora_endpoint') == '') return;
   ob_start();
   wp_enqueue_script('wp_calculadora_script');
   wp_enqueue_style('wp_calculadora_styles');
@@ -21,7 +22,14 @@ function wp_calculadora_shortcode ($params = array(), $content = null) {
 		"=" => "calculate"
   ]; 
   $actions = json_decode(get_option('_wp_calculadora_actions'), true);
-  foreach ($actions as  $action) { $buttons[$action['simbolo']] = $action['accion']; } ?> 
+  foreach ($actions as  $action) { $buttons[$action['simbolo']] = $action['accion']; } ?>
+  <script>
+    const endpoints = {
+      <?php foreach(json_decode(get_option('_wp_calculadora_actions'), true) as $endpoint) { ?>
+        '<?=$endpoint['accion']; ?>': '<?=get_option('_wp_calculadora_endpoint').$endpoint['accion']."/"; ?>',
+      <?php } ?>
+    };
+  </script>
   <div id="calculadora">
   	<div>0</div>
   	<?php foreach($buttons as $key => $action) {?>
