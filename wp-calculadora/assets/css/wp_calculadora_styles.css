@@ -1,0 +1,33 @@
+#calculadora {
+  display: flex;
+  max-width: 150px;
+  flex-wrap: wrap;
+  gap: 10px; 
+  padding: 10px; 
+  background-color: #cecece;	
+  box-shadow:5px 4px 0px 2px #6a6a6a;
+  border-radius: 10px;
+}
+#calculadora > div {
+	width: 100%;
+  padding: 3px;
+  text-align: right;
+  background-color: #efefef;	
+  overflow:hidden;
+  word-wrap: break-word;
+}
+#calculadora > button,
+#calculadora > button:disabled {
+  width: calc(33.33% - 7px);
+  border: none;
+  padding: 3px 0;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px 1px #6a6a6a;
+  background-color: #ffffff;
+  color: #000;
+  cursor: pointer;
+}
+
+#calculadora > button:disabled {
+  background-color: red;
+}
