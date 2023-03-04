@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ac-update-forms\n"
+"POT-Creation-Date: 2023-03-04 08:48+0100\n"
+"PO-Revision-Date: 2023-03-04 08:48+0100\n"
+"Last-Translator: \n"
+"Language-Team: monclus.jorge@gmail.com\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: _;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/admin.php:6
+msgid "WP Calculadora"
+msgstr "WP Calculadora"
+
+#: ../lib/admin.php:10
+msgid "WP Calculadora config"
+msgstr "Configuración WP Calculadora"
+
+#: ../lib/admin.php:12
+msgid "Data saved correctly."
+msgstr "Datos guardados correctamente."
+
+#: ../lib/admin.php:17
+msgid "URL API"
+msgstr "URL API"
+
+#: ../lib/admin.php:18
+msgid "With trailing slash"
+msgstr "Con barra final"
+
+#: ../lib/admin.php:21
+msgid "Endpoints"
+msgstr "Endpoints"
+
+#: ../lib/admin.php:24
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: ../lib/admin.php:25 ../lib/admin.php:34 ../lib/shortcodes.php:33
+msgid "Symbol"
+msgstr "Símbolo"
+
+#: ../lib/admin.php:32
+msgid "Action"
+msgstr "Acción"
+
+#: ../lib/admin.php:33
+msgid "/number1/number2"
+msgstr "/numero1/numero2"
+
+#: ../lib/admin.php:39
+msgid "Save"
+msgstr "Guardar"

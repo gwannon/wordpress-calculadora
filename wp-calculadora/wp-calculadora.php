@@ -19,7 +19,7 @@ define("VER", '1.0');
 
  /* ----------- Idiomas ------------ */
 function wp_calculadora_plugins_loaded() {
-  load_plugin_textdomain('wp-calculadora', false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
+  load_plugin_textdomain('wp_calculadora', false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
 }
 add_action('plugins_loaded', 'wp_calculadora_plugins_loaded', 0 );
 

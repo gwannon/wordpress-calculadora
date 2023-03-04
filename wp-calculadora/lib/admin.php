@@ -9,7 +9,7 @@ function wpatg_plugin_menu() {
 function wp_calculadora_page_settings() { 
 	?><h1><?php _e("WP Calculadora config", 'wp_calculadora'); ?></h1><?php 
 	if(isset($_REQUEST['send']) && $_REQUEST['send'] != '') { 
-    ?><p style="border: 1px solid green; color: green; text-align: center;"><?php _e("Datos guardados correctamente.", 'wp_calculadora'); ?></p><?php
+    ?><p style="border: 1px solid green; color: green; text-align: center;"><?php _e("Data saved correctly.", 'wp_calculadora'); ?></p><?php
 		update_option('_wp_calculadora_endpoint', $_POST['_wp_calculadora_endpoint']);
     if(isset($_POST['_wp_calculadora_actions']) && isset($_POST['_wp_calculadora_endpoint']) && $_POST['_wp_calculadora_endpoint'] != '') update_option('_wp_calculadora_actions', json_encode( wp_calculadora_remove_empty($_POST['_wp_calculadora_actions'])));
 	} ?>
@@ -29,14 +29,14 @@ function wp_calculadora_page_settings() {
           for ($i = 0; $i < $items; $i++) { ?>
           <tr>
             <td><?=get_option('_wp_calculadora_endpoint'); ?></td>
-            <td><input type="text" name="_wp_calculadora_actions[<?=$i; ?>][accion]" value="<?=(isset($actions[$i]['accion']) ? $actions[$i]['accion'] : ''); ?>" style=" width: 100%;" placeholder="<?php _e("Acción", 'wp_calculadora'); ?>" /></td>
+            <td><input type="text" name="_wp_calculadora_actions[<?=$i; ?>][accion]" value="<?=(isset($actions[$i]['accion']) ? $actions[$i]['accion'] : ''); ?>" style=" width: 100%;" placeholder="<?php _e("Action", 'wp_calculadora'); ?>" /></td>
             <td><?php _e("/number1/number2", 'wp_calculadora'); ?></td>
-            <td><input type="text" name="_wp_calculadora_actions[<?=$i; ?>][simbolo]" value="<?=(isset($actions[$i]['simbolo']) ? $actions[$i]['simbolo'] : ''); ?>" style=" width: 100%;" placeholder="<?php _e("Simbolo", 'wp_calculadora'); ?>" /></td>
+            <td><input type="text" name="_wp_calculadora_actions[<?=$i; ?>][simbolo]" value="<?=(isset($actions[$i]['simbolo']) ? $actions[$i]['simbolo'] : ''); ?>" style=" width: 100%;" placeholder="<?php _e("Symbol", 'wp_calculadora'); ?>" /></td>
           </tr>
         <?php } ?>
       </table>
     <?php } ?>
-		<br/><input type="submit" name="send" class="button button-primary" value="<?php _e("Guardar", 'wp_calculadora'); ?>" />
+		<br/><input type="submit" name="send" class="button button-primary" value="<?php _e("Save", 'wp_calculadora'); ?>" />
 	</form>
 	<?php
 }
