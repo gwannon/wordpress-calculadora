@@ -46,20 +46,13 @@ jQuery( document ).ready(function() {
   }
 
   function calculateResult(numero1, accion, numero2) {
-      console.log(endpoints);
-
-      jQuery.ajax({
-        method: "GET",
-        url: endpoints[accion]+numero1+"/"+numero2
-      }).done(function(data) {
-        jQuery("#calculadora > div").html(jQuery.parseJSON(data).result);
-      }).fail(function() {
-        jQuery("#calculadora > div").html("ERROR");
-      });
-
-    /*if(accion == 'add') return parseFloat(numero1) + parseFloat(numero2);
-    else if(accion == 'subtract') return parseFloat(numero1) - parseFloat(numero2);
-    else if(accion == 'multiply') return parseFloat(numero1) * parseFloat(numero2);
-    else if(accion == 'divide') return parseFloat(numero1) / parseFloat(numero2);*/
+    jQuery.ajax({
+      method: "GET",
+      url: endpoints[accion]+numero1+"/"+numero2
+    }).done(function(data) {
+      jQuery("#calculadora > div").html(data.result);
+    }).fail(function() {
+      jQuery("#calculadora > div").html("ERROR");
+    });
   }
 });

@@ -7,7 +7,7 @@ function wpatg_plugin_menu() {
 }
 
 function wp_calculadora_page_settings() { 
-	?><h1><?php _e("Configuración WP Calculadora", 'wp_calculadora'); ?></h1><?php 
+	?><h1><?php _e("WP Calculadora config", 'wp_calculadora'); ?></h1><?php 
 	if(isset($_REQUEST['send']) && $_REQUEST['send'] != '') { 
     ?><p style="border: 1px solid green; color: green; text-align: center;"><?php _e("Datos guardados correctamente.", 'wp_calculadora'); ?></p><?php
 		update_option('_wp_calculadora_endpoint', $_POST['_wp_calculadora_endpoint']);
@@ -15,13 +15,14 @@ function wp_calculadora_page_settings() {
 	} ?>
 	<form method="post">
     <h3><?php _e("URL API", 'wp_calculadora'); ?></h3>
+    <p><?php _e("With trailing slash", 'wp_calculadora'); ?></p>
     <input type="text" name="_wp_calculadora_endpoint" value="<?=get_option('_wp_calculadora_endpoint'); ?>" style=" width: 90%;" />
     <?php if(get_option('_wp_calculadora_endpoint') != '') { ?>
       <h3><?php _e("Endpoints", 'wp_calculadora'); ?></h3>
       <table>
         <tr>
-          <th colspan="3">Endpoint</th>
-          <th><?php _e("Simbolo", 'wp_calculadora'); ?></th>
+          <th colspan="3"><?php _e("Endpoint", 'wp_calculadora'); ?></th>
+          <th><?php _e("Symbol", 'wp_calculadora'); ?></th>
         </tr>
         <?php $actions = json_decode(get_option('_wp_calculadora_actions'), true);
           $items = ($actions < 5 ? 5 : (count($actions) + 1));
@@ -29,7 +30,7 @@ function wp_calculadora_page_settings() {
           <tr>
             <td><?=get_option('_wp_calculadora_endpoint'); ?></td>
             <td><input type="text" name="_wp_calculadora_actions[<?=$i; ?>][accion]" value="<?=(isset($actions[$i]['accion']) ? $actions[$i]['accion'] : ''); ?>" style=" width: 100%;" placeholder="<?php _e("Acción", 'wp_calculadora'); ?>" /></td>
-            <td>/numero1/numero2</td>
+            <td><?php _e("/number1/number2", 'wp_calculadora'); ?></td>
             <td><input type="text" name="_wp_calculadora_actions[<?=$i; ?>][simbolo]" value="<?=(isset($actions[$i]['simbolo']) ? $actions[$i]['simbolo'] : ''); ?>" style=" width: 100%;" placeholder="<?php _e("Simbolo", 'wp_calculadora'); ?>" /></td>
           </tr>
         <?php } ?>

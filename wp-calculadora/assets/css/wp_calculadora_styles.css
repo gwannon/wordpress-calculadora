@@ -28,6 +28,6 @@
   cursor: pointer;
 }
 
-#calculadora > button:disabled {
+/*#calculadora > button:disabled {
   background-color: red;
-}
+}*/
