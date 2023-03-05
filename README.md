@@ -24,3 +24,11 @@ Una vez descargado el repositorio contine dos directorios:
 ## Instalación de API.
 1. Ejecutar "composer install" en /wordpress-calculadora/api/
 2. Configurar el vhosts para que caiga en /wordpress-calculadora/api/public/
+
+###Endpoints
+
+* GET add/[operador1]/[operador2]/ -> suma operador1 y operador2
+* GET subtract/[operador1]/[operador2]/ -> resta operador1 y operador2
+* GET multiply/[operador1]/[operador2]/ -> multiplica operador1 por operador2
+* GET divide/[operador1]/[operador2]/ -> divide operador1 entre operador2
+* GET pow/[operador1]/[operador2]/ -> eleva operador1 a la potencía operador2
