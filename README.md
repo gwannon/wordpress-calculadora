@@ -25,7 +25,7 @@ Una vez descargado el repositorio contine dos directorios:
 1. Ejecutar "composer install" en /wordpress-calculadora/api/
 2. Configurar el vhosts para que caiga en /wordpress-calculadora/api/public/
 
-###Endpoints
+### Endpoints
 
 * GET add/[operador1]/[operador2]/ -> suma operador1 y operador2
 * GET subtract/[operador1]/[operador2]/ -> resta operador1 y operador2
